@@ -1,0 +1,37 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.gaming {
+    font-size: 36px;
+    color: transparent;
+    /*文字を透明にする*/
+    background-clip: text;
+    /*背景を文字で切り抜く*/
+    background-image: linear-gradient(45deg, red, orange, yellow, green, aqua, blue, purple);
+    background-size: 1200%;
+    animation: 4s linear 0s infinite alternate slide;
+    /* slideアニメーションを4秒で往復の線形移動を無限回行う */
+}
+
+@keyframes slide {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 100% 0%;
+    }
+    /* 右から左へ移動するアニメーション */
+}
