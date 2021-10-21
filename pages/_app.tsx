@@ -48,7 +48,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           description: "mofupi.fm - Podcast by mofupi",
           images: [
             {
-              url: "mofupifm_large.png",
+              url: "https://mofupifm.vercel.app/mofupifm_large.png",
               width: 800,
               height: 600,
               alt: "mofupi.fm site logo",
