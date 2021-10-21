@@ -28,34 +28,20 @@ export default function Navbar() {
         align={"center"}
       >
         <Container maxW={"7xl"}>
-          <Flex
-            flex={{ base: 1, md: "auto" }}
-            ml={{ base: -2 }}
-            display={{ base: "flex", md: "none" }}
-          >
-            <IconButton
-              onClick={onToggle}
-              icon={isOpen
-                ? <CloseIcon w={3} h={3} />
-                : <HamburgerIcon w={5} h={5} />}
-              variant={"ghost"}
-              aria-label={"Toggle Navigation"}
-            />
-          </Flex>
-          <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
+          <Flex flex={{ base: 1 }} justify={{ base: "start", md: "start" }}>
             <NextLink href="/">
               <Link
-                textAlign={useBreakpointValue({ base: "center", md: "left" })}
+                textAlign={useBreakpointValue({ base: "left", md: "left" })}
                 fontFamily={"heading"}
               >
                 Home
               </Link>
             </NextLink>
 
-            <Flex display={{ base: "none", md: "flex" }} ml={10}>
+            <Flex display={{ md: "flex" }} ml={10}>
               <NextLink href="/about">
                 <Link
-                  textAlign={useBreakpointValue({ base: "center", md: "left" })}
+                  textAlign={useBreakpointValue({ base: "left", md: "left" })}
                   fontFamily={"heading"}
                 >
                   About

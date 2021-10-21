@@ -19,15 +19,17 @@ const Home = () => {
           podcast by mofupi
         </Text>
       </Heading>
-      <Heading as="h2" marginTop="5">
-        Latest Podcasts
-      </Heading>
-      <Divider marginTop="5" />
-      {/* 仮エレメント */}
-      <Box mt="5">
-        <Center>
-          <Text fontSize="30px">Coming Soon...</Text>
-        </Center>
+      <Box ml="3">
+        <Heading as="h2" marginTop="5">
+          Latest Podcasts
+        </Heading>
+        <Divider marginTop="5" />
+        {/* 仮エレメント */}
+        <Box mt="5">
+          <Center>
+            <Text fontSize="30px">Coming Soon...</Text>
+          </Center>
+        </Box>
       </Box>
       {/* <LatestPodcasts /> */}
     </Container>

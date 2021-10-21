@@ -1,10 +1,12 @@
 import "../styles/globals.css";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import Head from "next/head";
 
 import type { AppProps } from "next/app";
 import { Box, ChakraProvider, extendTheme } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 import { particleSetting } from "../logics/paritcle";
+import { DefaultSeo } from "next-seo";
 
 const theme = extendTheme({
   styles: {
@@ -33,6 +35,32 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, []);
   return (
     <ChakraProvider theme={theme}>
+      <Head>
+        <title>mofupi.fm - Podcast by mofupi</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <DefaultSeo
+        openGraph={{
+          type: "website",
+          locale: "ja_JP",
+          url: "https://mofupifm.vercel.app/",
+          site_name: "mofupi.fm",
+          description: "mofupi.fm - Podcast by mofupi",
+          images: [
+            {
+              url: "mofupifm_large.png",
+              width: 800,
+              height: 600,
+              alt: "mofupi.fm site logo",
+            },
+          ],
+        }}
+        twitter={{
+          handle: "@mofupi",
+          site: "https://mofupifm.vercel.app/",
+          cardType: "summary_large_image",
+        }}
+      />
       <Box pos="fixed" width="100%" height="100%" id="background" />
       <Navbar />
       <Component {...pageProps} />
