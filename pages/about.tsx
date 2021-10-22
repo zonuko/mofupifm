@@ -27,6 +27,8 @@ const About = () => {
   const zonukoDialog = useDisclosure();
   const ponyoDialog = useDisclosure();
   const omakeDialog = useDisclosure();
+  const kDialog = useDisclosure();
+  const kazuminDialog = useDisclosure();
 
   return (
     <>
@@ -118,64 +120,35 @@ const About = () => {
                   omakeworld
                 </Center>
               </Box>
+
+              <Box onClick={kDialog.onOpen} cursor="pointer" w="100%">
+                <Image
+                  mb="3"
+                  w="100%"
+                  borderRadius="full"
+                  src="icons/dckkkk_icon.jpg"
+                  alt="dckkkk twitter icon"
+                />
+                <Center w="100%" fontSize="16px">
+                  dckkkk
+                </Center>
+              </Box>
+
+              <Box onClick={kazuminDialog.onOpen} cursor="pointer" w="100%">
+                <Image
+                  mb="3"
+                  w="100%"
+                  borderRadius="full"
+                  src="icons/kazumin_icon.jpg"
+                  alt="kazumin_icon twitter icon"
+                />
+                <Center w="100%" fontSize="16px">
+                  かずみん
+                </Center>
+              </Box>
             </Grid>
           </Center>
         </Box>
-        <Modal
-          isCentered
-          motionPreset="slideInBottom"
-          isOpen={mofupiDialog.isOpen}
-          onClose={mofupiDialog.onClose}
-        >
-          <ModalOverlay />
-          <ModalContent>
-            <ModalHeader>mofupi</ModalHeader>
-            <ModalCloseButton color="black" />
-            <ModalBody color="black">
-              <Center>
-                <Image
-                  mb="3"
-                  boxSize="180px"
-                  borderRadius="full"
-                  src="icons/mofupi_icon.jpg"
-                  alt="mofupi twitter icon"
-                />
-              </Center>
-              <Heading as="h3" mt="1" fontSize="16px">
-                おにぎりの妖精
-              </Heading>
-              <Divider mt="2" />
-              <Box>
-                <Box>
-                  <Text>
-                    おにぎりをこよなく愛するおにぎりの妖精。
-                  </Text>
-                  <Text>
-                    ハンバーガーも好きらしい。
-                  </Text>
-                  <Text>
-                    インフラ関連のエンジニア。Windowsサーバーに詳しい。
-                  </Text>
-                </Box>
-                <Box mt="5">
-                  <Text>SNSリンク</Text>
-                  <Text>
-                    Twitter:{" "}
-                    <Link href="https://twitter.com/mofupi">
-                      https://twitter.com/mofupi
-                    </Link>
-                  </Text>
-                </Box>
-              </Box>
-            </ModalBody>
-
-            <ModalFooter>
-              <Button colorScheme="blue" mr={3} onClick={mofupiDialog.onClose}>
-                Close
-              </Button>
-            </ModalFooter>
-          </ModalContent>
-        </Modal>
 
         <Modal
           isCentered
@@ -331,6 +304,112 @@ const About = () => {
                     Twitter:{" "}
                     <Link href="https://twitter.com/omakeworld">
                       https://twitter.com/omakeworld
+                    </Link>
+                  </Text>
+                </Box>
+              </Box>
+            </ModalBody>
+
+            <ModalFooter>
+              <Button colorScheme="blue" mr={3} onClick={omakeDialog.onClose}>
+                Close
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+
+        <Modal
+          isCentered
+          motionPreset="slideInBottom"
+          isOpen={kDialog.isOpen}
+          onClose={kDialog.onClose}
+        >
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>dckkkk</ModalHeader>
+            <ModalCloseButton color="black" />
+            <ModalBody color="black">
+              <Center>
+                <Image
+                  mb="3"
+                  boxSize="180px"
+                  borderRadius="full"
+                  src="icons/dckkkk_icon.jpg"
+                  alt="dckkkk twitter icon"
+                />
+              </Center>
+              <Heading as="h3" mt="1" fontSize="16px">
+                ラブライブおじさんの妖精
+              </Heading>
+              <Divider mt="2" />
+              <Box>
+                <Box>
+                  <Text>
+                    アトリエをするやきうのおにいちゃん。
+                  </Text>
+                  <Text>
+                    sonyをこよなく愛するsony信者。あとARIA。
+                  </Text>
+                </Box>
+                <Box mt="5">
+                  <Text>SNSリンク</Text>
+                  <Text>
+                    Twitter:{" "}
+                    <Link href="https://twitter.com/dckkkk">
+                      https://twitter.com/dckkkk
+                    </Link>
+                  </Text>
+                </Box>
+              </Box>
+            </ModalBody>
+
+            <ModalFooter>
+              <Button colorScheme="blue" mr={3} onClick={omakeDialog.onClose}>
+                Close
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+
+        <Modal
+          isCentered
+          motionPreset="slideInBottom"
+          isOpen={kazuminDialog.isOpen}
+          onClose={kazuminDialog.onClose}
+        >
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>かずみん</ModalHeader>
+            <ModalCloseButton color="black" />
+            <ModalBody color="black">
+              <Center>
+                <Image
+                  mb="3"
+                  boxSize="180px"
+                  borderRadius="full"
+                  src="icons/kazumin_icon.jpg"
+                  alt="kazumin twitter icon"
+                />
+              </Center>
+              <Heading as="h3" mt="1" fontSize="16px">
+                謎の妖精
+              </Heading>
+              <Divider mt="2" />
+              <Box>
+                <Box>
+                  <Text>
+                    脱出ゲーム主催したり旅行業の資格持ってたり危険物取扱の資格持ってたりIQ145だったりする人。
+                  </Text>
+                  <Text>
+                    わからん…怖…何者…？
+                  </Text>
+                </Box>
+                <Box mt="5">
+                  <Text>SNSリンク</Text>
+                  <Text>
+                    Twitter:{" "}
+                    <Link href="https://twitter.com/ooti_kazumi">
+                      https://twitter.com/ooti_kazumi
                     </Link>
                   </Text>
                 </Box>
