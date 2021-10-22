@@ -1,10 +1,11 @@
 import { Box, Container, Heading, Image, Text } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import { NextSeo } from "next-seo";
 import Head from "next/head";
 
 export default function Custom404() {
-  const onigiriNum = Math.floor(Math.random() * 7) + 1;
+  const [iconNum, _] = useState(Math.floor(Math.random() * 7) + 1);
+
   return (
     <>
       <Head>
@@ -45,7 +46,7 @@ export default function Custom404() {
             mt="5"
             ml="auto"
             mr="auto"
-            src={`404/onigiri_${onigiriNum}.jpg`}
+            src={`404/onigiri_${iconNum}.jpg`}
             alt="mofupifm logo mid"
           />
           <Text
