@@ -26,6 +26,7 @@ const About = () => {
   const mofupiDialog = useDisclosure();
   const zonukoDialog = useDisclosure();
   const ponyoDialog = useDisclosure();
+  const omakeDialog = useDisclosure();
 
   return (
     <>
@@ -103,6 +104,18 @@ const About = () => {
                 />
                 <Center w="100%" fontSize="16px">
                   ponyo
+                </Center>
+              </Box>
+              <Box onClick={omakeDialog.onOpen} cursor="pointer" w="100%">
+                <Image
+                  mb="3"
+                  w="100%"
+                  borderRadius="full"
+                  src="icons/omake_icon.jpg"
+                  alt="omake twitter icon"
+                />
+                <Center w="100%" fontSize="16px">
+                  omakeworld
                 </Center>
               </Box>
             </Grid>
@@ -272,7 +285,60 @@ const About = () => {
             </ModalBody>
 
             <ModalFooter>
-              <Button colorScheme="blue" mr={3} onClick={zonukoDialog.onClose}>
+              <Button colorScheme="blue" mr={3} onClick={ponyoDialog.onClose}>
+                Close
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+
+        <Modal
+          isCentered
+          motionPreset="slideInBottom"
+          isOpen={omakeDialog.isOpen}
+          onClose={omakeDialog.onClose}
+        >
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>omakeworld</ModalHeader>
+            <ModalCloseButton color="black" />
+            <ModalBody color="black">
+              <Center>
+                <Image
+                  mb="3"
+                  boxSize="180px"
+                  borderRadius="full"
+                  src="icons/omake_icon.jpg"
+                  alt="omake twitter icon"
+                />
+              </Center>
+              <Heading as="h3" mt="1" fontSize="16px">
+                頭に股間の妖精
+              </Heading>
+              <Divider mt="2" />
+              <Box>
+                <Box>
+                  <Text>
+                    VTuberの話をしながら肉食って大豆を食べてスマブラする人。
+                  </Text>
+                  <Text>
+                    体重1t。プログラムも書ける。
+                  </Text>
+                </Box>
+                <Box mt="5">
+                  <Text>SNSリンク</Text>
+                  <Text>
+                    Twitter:{" "}
+                    <Link href="https://twitter.com/omakeworld">
+                      https://twitter.com/omakeworld
+                    </Link>
+                  </Text>
+                </Box>
+              </Box>
+            </ModalBody>
+
+            <ModalFooter>
+              <Button colorScheme="blue" mr={3} onClick={omakeDialog.onClose}>
                 Close
               </Button>
             </ModalFooter>
