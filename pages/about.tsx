@@ -253,9 +253,6 @@ const About = () => {
               <Box>
                 <Box>
                   <Text>
-                    このサイト(勝手に)作った人。
-                  </Text>
-                  <Text>
                     頭の先からつま先まで林檎な狂信者。 組み込み＆webエンジニア。
                   </Text>
                   <Text>
