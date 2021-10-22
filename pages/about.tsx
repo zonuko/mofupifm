@@ -93,6 +93,18 @@ const About = () => {
                   zonuko
                 </Center>
               </Box>
+              <Box onClick={ponyoDialog.onOpen} cursor="pointer" w="100%">
+                <Image
+                  mb="3"
+                  w="100%"
+                  borderRadius="full"
+                  src="icons/ponyo_icon.jpg"
+                  alt="ponyo twitter icon"
+                />
+                <Center w="100%" fontSize="16px">
+                  ponyo
+                </Center>
+              </Box>
             </Grid>
           </Center>
         </Box>
