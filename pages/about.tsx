@@ -276,8 +276,8 @@ const About = () => {
                   <Text>SNSリンク</Text>
                   <Text>
                     Twitter:{" "}
-                    <Link href="https://twitter.com/ponyo">
-                      https://twitter.com/ponyo
+                    <Link href="https://twitter.com/ponyo1127">
+                      https://twitter.com/ponyo1127
                     </Link>
                   </Text>
                 </Box>
