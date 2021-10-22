@@ -468,6 +468,12 @@ const About = () => {
                       https://twitter.com/ooti_kazumi
                     </Link>
                   </Text>
+                  <Text>
+                    かずみんぐすーん:{" "}
+                    <Link href="https://kazumin-mgn.com/kazmingsoon/">
+                      https://kazumin-mgn.com/kazmingsoon/
+                    </Link>
+                  </Text>
                 </Box>
               </Box>
             </ModalBody>
