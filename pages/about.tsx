@@ -153,6 +153,62 @@ const About = () => {
         <Modal
           isCentered
           motionPreset="slideInBottom"
+          isOpen={mofupiDialog.isOpen}
+          onClose={mofupiDialog.onClose}
+        >
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>mofupi</ModalHeader>
+            <ModalCloseButton color="black" />
+            <ModalBody color="black">
+              <Center>
+                <Image
+                  mb="3"
+                  boxSize="180px"
+                  borderRadius="full"
+                  src="icons/mofupi_icon.jpg"
+                  alt="mofupi twitter icon"
+                />
+              </Center>
+              <Heading as="h3" mt="1" fontSize="16px">
+                おにぎりの妖精
+              </Heading>
+              <Divider mt="2" />
+              <Box>
+                <Box>
+                  <Text>
+                    おにぎりをこよなく愛するおにぎりの妖精。
+                  </Text>
+                  <Text>
+                    ハンバーガーも好きらしい。
+                  </Text>
+                  <Text>
+                    インフラ関連のエンジニア。Windowsサーバーに詳しい。
+                  </Text>
+                </Box>
+                <Box mt="5">
+                  <Text>SNSリンク</Text>
+                  <Text>
+                    Twitter:{" "}
+                    <Link href="https://twitter.com/mofupi">
+                      https://twitter.com/mofupi
+                    </Link>
+                  </Text>
+                </Box>
+              </Box>
+            </ModalBody>
+
+            <ModalFooter>
+              <Button colorScheme="blue" mr={3} onClick={mofupiDialog.onClose}>
+                Close
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+
+        <Modal
+          isCentered
+          motionPreset="slideInBottom"
           isOpen={zonukoDialog.isOpen}
           onClose={zonukoDialog.onClose}
         >
@@ -364,7 +420,7 @@ const About = () => {
             </ModalBody>
 
             <ModalFooter>
-              <Button colorScheme="blue" mr={3} onClick={omakeDialog.onClose}>
+              <Button colorScheme="blue" mr={3} onClick={kDialog.onClose}>
                 Close
               </Button>
             </ModalFooter>
@@ -417,7 +473,7 @@ const About = () => {
             </ModalBody>
 
             <ModalFooter>
-              <Button colorScheme="blue" mr={3} onClick={omakeDialog.onClose}>
+              <Button colorScheme="blue" mr={3} onClick={kazuminDialog.onClose}>
                 Close
               </Button>
             </ModalFooter>
