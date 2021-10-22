@@ -25,6 +25,7 @@ import Head from "next/head";
 const About = () => {
   const mofupiDialog = useDisclosure();
   const zonukoDialog = useDisclosure();
+  const ponyoDialog = useDisclosure();
 
   return (
     <>
@@ -122,7 +123,7 @@ const About = () => {
               <Box>
                 <Box>
                   <Text>
-                    おにぎりをこよなく愛するおにぎりの精霊。
+                    おにぎりをこよなく愛するおにぎりの妖精。
                   </Text>
                   <Text>
                     ハンバーガーも好きらしい。
@@ -168,7 +169,7 @@ const About = () => {
                   boxSize="180px"
                   borderRadius="full"
                   src="icons/zonuko_icon.jpg"
-                  alt="mofupi twitter icon"
+                  alt="zonuko twitter icon"
                 />
               </Center>
               <Heading as="h3" mt="1" fontSize="16px">
@@ -199,6 +200,62 @@ const About = () => {
                     Twitter:{" "}
                     <Link href="https://twitter.com/nuhera">
                       https://twitter.com/nuhera
+                    </Link>
+                  </Text>
+                </Box>
+              </Box>
+            </ModalBody>
+
+            <ModalFooter>
+              <Button colorScheme="blue" mr={3} onClick={zonukoDialog.onClose}>
+                Close
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+
+        <Modal
+          isCentered
+          motionPreset="slideInBottom"
+          isOpen={ponyoDialog.isOpen}
+          onClose={ponyoDialog.onClose}
+        >
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>ponyo</ModalHeader>
+            <ModalCloseButton color="black" />
+            <ModalBody color="black">
+              <Center>
+                <Image
+                  mb="3"
+                  boxSize="180px"
+                  borderRadius="full"
+                  src="icons/ponyo_icon.jpg"
+                  alt="ponyo twitter icon"
+                />
+              </Center>
+              <Heading as="h3" mt="1" fontSize="16px">
+                B級サメ映画の妖精
+              </Heading>
+              <Divider mt="2" />
+              <Box>
+                <Box>
+                  <Text>
+                    このサイト(勝手に)作った人。
+                  </Text>
+                  <Text>
+                    頭の先からつま先まで林檎な狂信者。 組み込み＆webエンジニア。
+                  </Text>
+                  <Text>
+                    ジブリとヴァイオレットエヴァーガーデンとサメ映画と虚構新聞と車で出来ている。
+                  </Text>
+                </Box>
+                <Box mt="5">
+                  <Text>SNSリンク</Text>
+                  <Text>
+                    Twitter:{" "}
+                    <Link href="https://twitter.com/ponyo">
+                      https://twitter.com/ponyo
                     </Link>
                   </Text>
                 </Box>
