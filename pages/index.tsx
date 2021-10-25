@@ -12,20 +12,20 @@ import {
 
 const Home = () => {
   return (
-    <Container pos="relative" zIndex="1" maxW={"7xl"} p="12" pl="0">
+    <Container pos="relative" zIndex="1" maxW={"7xl"} p="7">
       <Heading as="div">
-        <Image src="mofupifm_mid.png" alt="mofupifm logo mid" />
-        <Text ml="3" fontWeight="400" fontSize="24px">
+        <Image ml="-4" src="mofupifm_mid.png" alt="mofupifm logo mid" />
+        <Text fontWeight="400" fontSize="24px">
           podcast by mofupi
         </Text>
       </Heading>
-      <Box ml="3">
+      <Box mt="10">
         <Heading as="h2" marginTop="5">
           Latest Podcasts
         </Heading>
-        <Divider marginTop="5" />
+        <Divider mt="2" />
         {/* 仮エレメント */}
-        <Box mt="5">
+        <Box>
           <Center>
             <Text fontSize="30px">Coming Soon...</Text>
           </Center>

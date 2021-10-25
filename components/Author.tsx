@@ -18,11 +18,9 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 
-type SnsTypes = "Twitter" | "Facebook";
-
 interface Sns {
   url: string;
-  type: SnsTypes;
+  type: string;
 }
 
 interface AuthorProps {
@@ -37,19 +35,27 @@ export default function Author(props: AuthorProps) {
   const dialog = useDisclosure();
 
   return (
-    <Box onClick={dialog.onOpen} cursor="pointer" w="100%">
-      <Image
-        mb="3"
-        w="100%"
-        borderRadius="full"
-        src={`icons/${props.iconName}.jpg`}
-        alt={`${props.name} icon image`}
-      />
-      <Center w="100%" fontSize="1rem">
-        {props.name}
-      </Center>
-
+    <Box
+      className="test"
+      onClick={dialog.onOpen}
+      cursor="pointer"
+      textAlign="center"
+      w="100%"
+    >
+      <Box display="inline-block" maxW="300">
+        <Image
+          mb="2"
+          w="100%"
+          borderRadius="full"
+          src={`icons/${props.iconName}.jpg`}
+          alt={`${props.name} icon image`}
+        />
+        <Center mb="12" w="100%" fontSize="1rem">
+          {props.name}
+        </Center>
+      </Box>
       <Modal
+        blockScrollOnMount={false}
         isCentered
         motionPreset="slideInBottom"
         isOpen={dialog.isOpen}
@@ -75,22 +81,26 @@ export default function Author(props: AuthorProps) {
             <Divider mt="2" />
             <Box>
               <Box>
-                {props.description.split("\n").map((t) => {
+                {props.description.split("\n").map((t) => (
                   <Text>
                     {t}
-                  </Text>;
-                })}
+                  </Text>
+                ))}
               </Box>
               <Box mt="5">
                 <Text>SNSリンク</Text>
-                {props.snsLinks.map((l: Sns) => {
+                {props.snsLinks.map((l: Sns) => (
                   <Text>
-                    l.type:{" "}
-                    <Link href={l.url}>
+                    {l.type}:{" "}
+                    <Link
+                      rel="noopener"
+                      target="_blank"
+                      href={l.url}
+                    >
                       {l.url}
                     </Link>
-                  </Text>;
-                })}
+                  </Text>
+                ))}
               </Box>
             </Box>
           </ModalBody>
