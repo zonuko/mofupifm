@@ -47,12 +47,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         openGraph={{
           type: "website",
           locale: "ja_JP",
-          url: "https://mofupifm.vercel.app/",
+          url: "https://mofupi-fm.vercel.app/",
           site_name: "mofupi.fm",
           description: "mofupi.fm - Podcast by mofupi",
           images: [
             {
-              url: "https://mofupifm.vercel.app/mofupifm_large.png",
+              url: "https://mofupi-fm.vercel.app/mofupifm_large.png",
               width: 800,
               height: 600,
               alt: "mofupi.fm site logo",
@@ -61,7 +61,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         }}
         twitter={{
           handle: "@mofupi",
-          site: "https://mofupifm.vercel.app/",
+          site: "https://mofupi-fm.vercel.app/",
           cardType: "summary_large_image",
         }}
       />
