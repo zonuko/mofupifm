@@ -1,4 +1,4 @@
 module.exports = {
-    siteUrl: "https://mofupifm.vercel.app/",
+    siteUrl: "https://mofupi-fm.vercel.app/",
     generateRobotsTxt: true,
 }
