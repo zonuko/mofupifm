@@ -38,6 +38,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>mofupi.fm - Podcast by mofupi</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="google-site-verification"
+          content="eNAqoUzgOJ8byNb8gV7WY8uvOc0J3O7MN_VLePQPSls"
+        />
       </Head>
       <DefaultSeo
         openGraph={{
