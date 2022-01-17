@@ -58,7 +58,8 @@ const defaultAuthors = [
     name: "かずみん",
     title: "謎の妖精",
     iconName: "kazumin_icon",
-    description: "脱出ゲーム主催したり旅行業の資格持ってたり危険物取扱の資格持ってたりIQ145だったりする人。\nわからん…怖…何者…？",
+    description:
+      "体験型ゲーム主催したり旅行業の資格持ってたり危険物取扱の資格持ってたりIQ145だったりする人。\nわからん…怖…何者…？",
     snsLinks: [{ url: "https://twitter.com/ooti_kazumi", type: "Twitter" }, {
       type: "かずみんぐすーん",
       url: "https://kazumin-mgn.com/kazmingsoon/",
