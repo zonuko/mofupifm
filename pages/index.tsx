@@ -55,7 +55,6 @@ const Home = () => {
                   src="https://anchor.fm/mofupifm/embed/episodes/mofupi-fm0-e1d2i0m"
                   height="180px"
                   width="100%"
-                  frameborder="0"
                   scrolling="no"
                 >
                 </iframe>
