@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Badge,
   Box,
   Center,
   Container,
@@ -11,6 +12,12 @@ import {
 // import LatestPodcasts from "../components/LatestPodcasts";
 
 const Home = () => {
+  const property = {
+    beds: 3,
+    baths: 2,
+    title: "#0は次の内容について喋りました。車とEVについて、Next.jsでPodcastのサイトを作った話、エンジニアと営業",
+    date: "2020/03/19",
+  };
   return (
     <Container pos="relative" zIndex="1" maxW={"7xl"} p="7">
       <Heading as="div">
@@ -25,10 +32,43 @@ const Home = () => {
         </Heading>
         <Divider mt="2" />
         {/* 仮エレメント */}
-        <Box>
-          <Center>
-            <Text fontSize="30px">Coming Soon...</Text>
-          </Center>
+        <Box mt="10">
+          <Box borderWidth="1px" borderRadius="lg" overflow="hidden">
+            <Box p="6">
+              <Box display="flex" alignItems="baseline">
+                <Badge borderRadius="full" px="2" colorScheme="teal">
+                  New
+                </Badge>
+                <Box
+                  color="gray.500"
+                  fontWeight="semibold"
+                  letterSpacing="wide"
+                  fontSize="xs"
+                  textTransform="uppercase"
+                  ml="2"
+                >
+                  {property.date}
+                </Box>
+              </Box>
+              <Box mt="3">
+                <iframe
+                  src="https://anchor.fm/mofupifm/embed"
+                  height="180px"
+                  width="100%"
+                  frameborder="0"
+                  scrolling="no"
+                >
+                </iframe>
+              </Box>
+              <Box
+                as="h4"
+                lineHeight="tight"
+                isTruncated
+              >
+                {property.title}
+              </Box>
+            </Box>
+          </Box>
         </Box>
       </Box>
       {/* <LatestPodcasts /> */}
