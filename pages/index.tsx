@@ -2,7 +2,6 @@ import React from "react";
 import {
   Badge,
   Box,
-  Center,
   Container,
   Divider,
   Heading,
@@ -53,16 +52,15 @@ const Home = () => {
               <Box mt="3">
                 <iframe
                   src="https://anchor.fm/mofupifm/embed/episodes/mofupi-fm0-e1d2i0m"
-                  height="180px"
                   width="100%"
+                  height="150px"
                   scrolling="no"
                 >
                 </iframe>
               </Box>
               <Box
-                as="h4"
+                className="podcast-text-content"
                 lineHeight="tight"
-                isTruncated
               >
                 {property.title}
               </Box>
